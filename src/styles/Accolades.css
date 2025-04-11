@@ -1,0 +1,43 @@
+.accolades-container {
+    padding: 50px 100px;
+    text-align: center;
+    margin: 100px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  .accolades-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .accolades-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+  }
+  
+  .accolade-box {
+    width: 25%; /* 3 columns */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    box-shadow: inset 0 0 0 5px #bfa145;
+  }
+  
+  .accolade-image {
+    width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .accolade-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+  }

@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'
-import ListingsPage from './pages/ListingsPage';
+// import ListingsPage from './pages/ListingsPage';
 import Navbar from './components/Navbar';
-import MortgageCalculator from './pages/MortgageCalculator';
+import MortgageCalculator from './components/MortgageCalculator';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/listings" element={<ListingsPage />} />
+          {/* <Route path="/listings" element={<ListingsPage />} /> */}
           <Route path="/mortgage-calculator" element={<MortgageCalculator />} />
         </Routes>
     </Router>
