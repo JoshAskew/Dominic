@@ -1,11 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+
+
 .hero-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    max-width: 100%;
+    margin:100px 50px;
 }
 
 .hero-background {
@@ -107,53 +162,458 @@
 .meet-your-realtor-container {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    max-width: 100vw;
-    background-color: rgba(0, 0, 0, 0.862);
-    color: white;
+    flex-wrap: wrap; /* allows stacking on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f0f0f0; /* light grey background */
+    color: black;
     border-radius: 10px;
-    padding:100px;
-    gap: 100px;
-}
+    padding: 80px 60px;
+    gap: 60px;
+    max-width: 100vw;
+    position: relative;
+    margin:-100px 100px 100px 100px;
 
-.meet-your-realtor-left {
+  }
+  
+  .meet-your-realtor-left,
+  .meet-your-realtor-right {
     flex: 1;
+    min-width: 300px;
+  }
+  
+  .meet-your-realtor-left {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     max-width: 50%;
-}
-.meet-your-realtor-right {
-    flex: 1;
+  }
+  
+  .meet-your-realtor-right {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 50%;
-}
-
-.meet-your-realtor-image {
+  }
+  
+  .meet-your-realtor-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
-}
-
-.meet-your-realtor-button-wrapper {
+  }
+  
+  .meet-your-realtor-button-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 40px;
   }
+  
+  .luxury-button {
+    background-color: black;
+    color: gold;
+    border: 2px solid gold;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .luxury-button:hover {
+    background-color: gold;
+    color: black;
+    box-shadow: 0 0 10px gold;
+  }
 
-.coffee-container {
+  .coffee-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin: 50px 200px 100px; 
+    padding: 80px 60px;
+    border-radius: 12px;
+  }
+  
+  .coffee-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 60px;
+  }
+  
+  .coffee-left {
+    flex: 1;
+  }
+  
+  .coffee-right {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    background-color: aliceblue;
-    margin-left:200px;
-    margin-right:200px;
-    margin-bottom: 100px;
-    padding: 50px;
+  }
+  
+  .coffee-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .coffee-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .coffee-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .coffee-button-wrapper {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .coffee-button {
+    background-color: black;
+    color: gold;
+    border: 2px solid gold;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .coffee-button:hover {
+    background-color: gold;
+    color: black;
+    box-shadow: 0 0 10px gold;
+  }
+  
+  .accolades-container {
+    padding: 50px 100px;
+    text-align: center;
+    margin: 100px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+  .accolades-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .accolades-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+  }
+  
+  .accolade-box {
+    width: 25%; /* 3 columns */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    box-shadow: inset 0 0 0 5px #bfa145;
+  }
+  
+  .accolade-image {
+    width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .accolade-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .new-listings-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    padding: 60px 40px;
+    background-color: #f5f5f5;
+    margin:0px 20px 100px 20px;
+    border-radius: 10px;
+  }
+
+.new-listings-header {
+  width: 100%;
+  text-align: center;  /* Ensure the title is centered */
 }
+
+.new-listings-title {
+  margin: 0;
+  font-size: 2rem;  /* Adjust this for your desired size */
+  font-weight: bold;
+  color: #111;
+}
+  
+  .listing-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .listing-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Container for the image and badges */
+  .listing-image-container {
+    position: relative;  /* Position context for badges */
+  }
+  
+  .listing-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .listing-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .badge {
+    background-color: #bfa145; /* gold tone */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+    
+  .listing-details {
+    padding: 20px;
+  }
+  
+  .listing-address {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 5px;
+  }
+  
+  .listing-city {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .listing-price {
+    font-size: 1.1rem;
+    color: #bfa145; /* gold tone */
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .listing-beds-baths {
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .services-container {
+    background-color: #f5f5f5;
+    padding: 60px 40px;
+    text-align: center;
+    margin: 0 20px 100px 20px;
+    border-radius: 10px;
+  }
+  
+  .services-header {
+    margin-bottom: 40px;
+  }
+  
+  .services-title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .services-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+    padding: 100px 70px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-heading {
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  
+  .service-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .service-button {
+    background-color: #bfa145;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .service-button:hover {
+    background-color: #a38836;
+  }
+  
+  .areas-container {
+    text-align: center;
+  }
+  
+  .areas-header {
+    margin-bottom: 40px;
+  }
+  
+  .areas-title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .areas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .area-card {
+    flex: 0 0 33.3333%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.3s ease;
+  }
+  
+  .area-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+  
+  .area-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .area-name {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .testimonials-container {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .testimonials-header {
+    margin-bottom: 40px;
+  }
+  
+  .testimonials-title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+  
+  .testimonial-card {
+    flex: 0 0 300px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    color: #bfa145;
+  }
