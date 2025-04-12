@@ -69,13 +69,12 @@ table {
   align-items: center;
   height: 80vh;
   max-width: 100%;
-  margin: 100px 50px;
 }
 
 .hero-background {
   position: relative;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 150px;
   height: 100vh;
   /* Needed to fill the space correctly */
   overflow: hidden;
@@ -84,8 +83,7 @@ table {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Adjust opacity here */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 65.23%, rgba(255, 255, 255, 0.90) 87.83%, #FFF 96.52%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
   z-index: 0;
 }
 
@@ -98,16 +96,26 @@ table {
 .hero-subtitle {
   position: absolute;
   /* 👈 Put the title over the image */
-  top: 20%;
+  font-family: Merriweather, sans-serif;
+  font-style: italic;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.5rem;
+  font-size: 22px;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 1);
   /* 👈 Optional: helps make text pop */
   z-index: 1;
   text-align: center;
-  text-transform: uppercase;
+  font-family: Merriweather, sans-serif;
+  font-style: italic;
+}
+
+.dash-span {
+  color: #EFA936;
+  font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  letter-spacing: -3px;
 }
 
 
@@ -115,36 +123,68 @@ table {
   position: absolute;
   /* 👈 Put the title over the image */
   top: 40%;
-  left: 40%;
-  transform: translate(-30%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* 👈 Center the title */
   color: white;
-  font-size: 3rem;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 1);
   /* 👈 Optional: helps make text pop */
-  z-index: 1;
   text-align: center;
   text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 113.2%;
+  letter-spacing: -0.68px;
 }
 
-.hero-button {
+.gulf {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 580px;
+  position: absolute;
+  /* 👈 Put the description over the image */
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 👈 Center the description */
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  /* 👈 Optional: helps make text pop */
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 118.232%;
+  /* 21.282px */
+  letter-spacing: -0.18px;
+}
+
+.gold-button {
   position: absolute;
   /* 👈 Put the button over the image */
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* 👈 Center the button */
-  background-color: black;
-  color: gold;
-  border: 2px solid gold;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  display: flex;
+  height: 42px;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  background: #EFA936;
+}
+
+.gold-button:hover {
+  background: #F2BA5F;
 }
 
 .hero-button2 {
@@ -160,12 +200,6 @@ table {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: gold;
-  color: black;
-  box-shadow: 0 0 10px gold;
 }
 
 .coffee-container {
@@ -209,10 +243,7 @@ table {
 
 .coffee-image {
   width: 100%;
-  max-width: 200px;
   height: auto;
-  object-fit: cover;
-  border-radius: 8px;
 }
 
 .coffee-button-wrapper {
@@ -368,5 +399,5 @@ table {
 }
 
 .footer {
- padding-top: 100px;
+  padding-top: 100px;
 }

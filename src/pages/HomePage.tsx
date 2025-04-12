@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import HomeStock from '../assets/HouseStock.jpg';
+import HeroBackground from '../assets/Hero-Background.png'
 import '../styles/Home.css'; 
-import MortgageCalculator from '../components/MortgageCalculator';
-import Coffee from '../assets/Coffee.png';
+// import MortgageCalculator from '../components/MortgageCalculator';
+import Coffee from '../assets/CoffeeHouse.png';
 import FAQ from '../components/FAQ';
 import Listings from '../components/Listings';
 import Accolades from '../components/Accolades';
@@ -24,32 +24,33 @@ import ContactForm from '../components/ContactForm';
     <>
       <section className='hero-container'>
         <div className='hero-background'>
-          <img src={HomeStock} alt="House Stock" className='hero-image' />
+          <img src={HeroBackground} alt="House Stock" className='hero-image' />
           <div className='hero-overlay'></div>
-          <h5 className='hero-subtitle'>Realtor in Sarasota, FL</h5>
-          <h1 className='hero-title'>Not just homes—masterpieces of lifestyle, curated with precision and care</h1>
-          <Link to='./meet-my-realtor' className='hero-button'>Meet My Realtor</Link>
+          <h5 className='hero-subtitle'><span className='dash-span'>--</span> Your Sarasota Lifestyle Starts Here <span className='dash-span'>--</span></h5>
+          <h1 className='hero-title'>Find Your Dream<br/>Home by the <span className='gulf'>Gulf</span></h1>
+          <p className='hero-description'>Whether you're buying, selling, or just exploring your options, I'm here to help you navigate every step with confidence.</p>
+          <Link to='./meet-my-realtor' className='gold-button'>LET'S CONNECT</Link>
         </div>
       </section>
 
-      <MortgageCalculator />
+      {/* <MortgageCalculator /> */}
 
       <MeetDomanic />
 
       <section className='coffee-container'>
         <div className='coffee-content'>
           <div className='coffee-left'>
-            <h5 className='coffee-title'>Keep it Casual</h5>
+            <h2 className='coffee-title'>Coffee With <span className='domanic-span'>Domanic</span></h2>
             <p className='coffee-description'>
-              I believe that every great conversation starts with a cup of coffee. Let's chat about your real estate needs over a warm brew.
+            Buying your first home, selling your current one, or just exploring your options? Let's meet up over coffee and talk about what you're looking for. No pushy sales pitch—just honest, local advice to help you get started.
             </p>
+            <div className='coffee-button-wrapper'>
+          <button className='coffee-button' onClick={scrollToContact}>Schedule a Coffee</button>
+        </div>
           </div>
           <div className='coffee-right'>
             <img src={Coffee} alt="Coffee" className='coffee-image' />
           </div>
-        </div>
-        <div className='coffee-button-wrapper'>
-          <button className='coffee-button' onClick={scrollToContact}>Schedule a Coffee</button>
         </div>
       </section>
 
@@ -81,12 +82,12 @@ import ContactForm from '../components/ContactForm';
         </div>
         <div className='areas-grid'>
           {[
-            { city: 'Sarasota', image: HomeStock },
-            { city: 'Venice', image: HomeStock },
-            { city: 'Bradenton', image: HomeStock },
-            { city: 'Siesta Key', image: HomeStock },
-            { city: 'Longboat Key', image: HomeStock },
-            { city: 'Lakewood Ranch', image: HomeStock },
+            { city: 'Sarasota', image: HeroBackground },
+            { city: 'Venice', image: HeroBackground },
+            { city: 'Bradenton', image: HeroBackground },
+            { city: 'Siesta Key', image: HeroBackground },
+            { city: 'Longboat Key', image: HeroBackground },
+            { city: 'Lakewood Ranch', image: HeroBackground },
           ].map((area, index) => (
             <div
               key={index}

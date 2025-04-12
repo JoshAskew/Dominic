@@ -1,6 +1,5 @@
-import HeadShot from '../assets/DomanicHeadShot.jpg';
+import HeadShot from '../assets/DomanicHeadShot.png';
 import '../styles/MeetDomanic.css';
-import { Link } from 'react-router-dom';
 
 
 const MeetDomanic: React.FC = () => {
@@ -9,22 +8,19 @@ const MeetDomanic: React.FC = () => {
     <>
       <section className='meet-your-realtor-container'>
         <div className='meet-your-realtor-left'>
-          <h5 className='meet-your-realtor-title'>Meet Your Realtor</h5>
-          <h2 className='meet-your-realtor-description'>Domanic Calamese</h2>
-          <p>
-            With a passion for real estate and a commitment to excellence, I am dedicated to helping you find your dream home. My extensive knowledge of the Sarasota market, combined with my personalized approach, ensures that your home-buying experience is seamless and enjoyable.
-          </p>
+        <img src={HeadShot} alt="Domanic Calamese Headshot" className='meet-your-realtor-image' />
         </div>
 
         <div className='meet-your-realtor-right'>
-          <img src={HeadShot} alt="Domanic Calamese Headshot" className='meet-your-realtor-image' />
+        <h5 className='meet-your-realtor-title'>Meet Your Realtor</h5>
+          <h2 className='meet-your-realtor-name'>Domanic Calamese</h2>
+          <p className='meet-your-realtor-description'>
+          Lorem ipsum dolor sit amet consectetur. Aliquet nam purus pellentesque lacus donec arcu mi. Varius faucibus sociis arcu tortor mauris. Massa augue dignissim fermentum magna viverra mattis. Pulvinar tempus suspendisse sit ipsum lectus lectus. Tortor blandit eget risus rutrum convallis vitae non. Rhoncus facilisis tellus non in aliquam dolor ipsum cursus gravida. In odio sit ac aliquam lacus. Sagittis scelerisque turpis et nunc et vitae nunc. Aenean nunc enim lacinia sit in.
+          Velit tellus interdum urna consequat nunc eget. Suspendisse in posuere quam risus sit pulvinar sit. Proin amet imperdiet rutrum integer bibendum libero lectus ullamcorper eget. Nibh sollicitudin sem nibh ac at sodales ut. Ultrices mattis feugiat semper quisque facilisis lorem enim convallis. Pellentesque mauris at tempus convallis enim. Eget netus tristique id nullam. 
+          </p>
+         
         </div>
 
-        {/* 👇 Button wrapper */}
-        <div className='meet-your-realtor-button-wrapper'>
-          <Link to='/meet-my-realtor' className='luxury-button'>Find Out More
-          </Link>
-        </div>
       </section>
     </>
   )

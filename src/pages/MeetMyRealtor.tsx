@@ -1,4 +1,4 @@
-import HeadShot from '../assets/DomanicHeadShot.jpg';
+import HeadShot from '../assets/DomanicHeadShot.png';
 import '../styles/MeetDomanic.css';
 
 
