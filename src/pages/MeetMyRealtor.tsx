@@ -1,13 +1,14 @@
 import HeadShot from '../assets/DomanicHeadShot.jpg';
 import '../styles/MeetDomanic.css';
-import { Link } from 'react-router-dom';
 
 
-const MeetDomanic: React.FC = () => {
+const MeetMyRealtor: React.FC = () => {
   return (
 
     <>
-      <section className='meet-your-realtor-container'>
+      <section className='meet-your-realtor-container' style={
+        {marginTop: '100px'}
+      }>
         <div className='meet-your-realtor-left'>
           <h5 className='meet-your-realtor-title'>Meet Your Realtor</h5>
           <h2 className='meet-your-realtor-description'>Domanic Calamese</h2>
@@ -19,14 +20,8 @@ const MeetDomanic: React.FC = () => {
         <div className='meet-your-realtor-right'>
           <img src={HeadShot} alt="Domanic Calamese Headshot" className='meet-your-realtor-image' />
         </div>
-
-        {/* 👇 Button wrapper */}
-        <div className='meet-your-realtor-button-wrapper'>
-          <Link to='/meet-my-realtor' className='luxury-button'>Find Out More
-          </Link>
-        </div>
       </section>
     </>
   )
 }
-export default MeetDomanic;
+export default MeetMyRealtor;

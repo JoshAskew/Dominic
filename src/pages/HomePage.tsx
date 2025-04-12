@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import HomeStock from '../assets/HouseStock.jpg';
-import '../styles/Home.css';
+import '../styles/Home.css'; 
 import MortgageCalculator from '../components/MortgageCalculator';
 import Coffee from '../assets/Coffee.png';
-import FAQ from '../components/FAQ'
+import FAQ from '../components/FAQ';
 import Listings from '../components/Listings';
 import Accolades from '../components/Accolades';
 import MeetDomanic from '../components/MeetDomanic';
 import Testimonials from '../components/Testimonials';
 import GetInTouch from '../components/GetInTouch';
+import ContactForm from '../components/ContactForm';
 
+  const HomePage: React.FC = () => {
 
-const HomePage: React.FC = () => {
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <section className='hero-container'>
@@ -20,12 +28,12 @@ const HomePage: React.FC = () => {
           <div className='hero-overlay'></div>
           <h5 className='hero-subtitle'>Realtor in Sarasota, FL</h5>
           <h1 className='hero-title'>Not just homes—masterpieces of lifestyle, curated with precision and care</h1>
-          <button className='hero-button'>Meet My Realtor</button>
+          <Link to='./meet-my-realtor' className='hero-button'>Meet My Realtor</Link>
         </div>
       </section>
 
       <MortgageCalculator />
-      
+
       <MeetDomanic />
 
       <section className='coffee-container'>
@@ -41,11 +49,12 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className='coffee-button-wrapper'>
-          <button className='coffee-button'>Schedule a Coffee</button>
+          <button className='coffee-button' onClick={scrollToContact}>Schedule a Coffee</button>
         </div>
       </section>
 
       <Accolades />
+      
       <Listings />
 
       <section className='services-container'>
@@ -94,7 +103,12 @@ const HomePage: React.FC = () => {
 
       <FAQ />
 
-      <GetInTouch />
+      <GetInTouch ref={contactRef}/>
+
+      <ContactForm />
+      
+      <div className='footer'></div>
+        
 
     </>
 

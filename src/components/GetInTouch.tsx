@@ -2,13 +2,13 @@ import Phone from '../assets/Phone.png'
 import Email from '../assets/Email.png'
 import Location from '../assets/Location.png'
 import '../styles/GetInTouch.css'
+import { forwardRef } from 'react';
 
-
-const GetInTouch: React.FC = () => {
+const GetInTouch = forwardRef<HTMLDivElement>((_, ref) => {
 
     return (
         <>
-            <section className="icons-container">
+            <section className="icons-container" ref={ref}>
                 <div className="icons-header">
                     <h2 className="icons-title">Get in Touch</h2>
                 </div>
@@ -31,7 +31,7 @@ const GetInTouch: React.FC = () => {
                 </div>
             </section>
         </>
-    )
-}
+    );
+});
 
 export default GetInTouch
