@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
       method="POST"
       className="contact-form"
     >
-      <h3>Get In Touch</h3>
+      <h3>Lets Chat</h3>
 
       {/* Anti-spam */}
       <input type="hidden" name="_captcha" value="false" />
