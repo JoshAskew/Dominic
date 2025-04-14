@@ -9,10 +9,11 @@ import Listings from '../components/Listings';
 // import Accolades from '../components/Accolades';
 import MeetDomanic from '../components/MeetDomanic';
 import Testimonials from '../components/Testimonials';
-import GetInTouch from '../components/GetInTouch';
 import ContactForm from '../components/ContactForm';
 import HomeStock from '../assets/HouseStock.jpg'
 import SaleHouse from '../assets/SaleHouse.png'
+import Social from '../components/Social';
+import Footer from '../components/Footer';
 
   const HomePage: React.FC = () => {
 
@@ -109,11 +110,13 @@ import SaleHouse from '../assets/SaleHouse.png'
 
       <Testimonials />
 
+      <Social />
+
       <FAQ />
 
-      <GetInTouch ref={contactRef}/>
-
       <ContactForm />
+
+      <Footer />
       
       <div className='footer'></div>
         

@@ -1,55 +1,90 @@
+.faq-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  background: #F5F7F6;
+}
+
 .faq-section {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .faq-title {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .faq-item {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #ececec;
-    border: none;
-    width: 100%;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    color: #222;
-  }
-  
-  .faq-question .arrow {
-    font-size: 1.5rem;
-    color: #bfa145;
-  }
-  
-  .faq-answer {
-    padding: 20px;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    background-color: white;
-  }
-  
+  max-width: 800px;
+  margin: 120px auto;
+  /* padding: 60px 20px; */
+}
+
+.faq-subtitle {
+  color: #EFA936;
+  text-align: center;
+  font-family: Merriweather;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 118.232%;
+  letter-spacing: 0.44px;
+  margin-bottom: 8px;
+}
+
+.faq-title {
+  color: #212022;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 113.2%;
+  letter-spacing: -0.4px;
+  margin-bottom: -48px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.question {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 113.2%;
+  letter-spacing: -0.18px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.faq-question .arrow {
+  font-size: 1.5rem;
+  color: #bfa145;
+}
+
+.faq-answer {
+  color: #212022;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  padding: 20px;
+}

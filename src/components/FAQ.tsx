@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import '../styles/FAQ.css';
+import DownArrow from '../assets/DownArrow.png';
+import UpArrow from '../assets/UpArrow.png';
 
 const faqs = [
   {
@@ -47,24 +49,35 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="faq-section">
-      <h2 className="faq-title">Frequently Asked Questions</h2>
-      <div className="faq-list">
-        {faqs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <button className="faq-question" onClick={() => toggle(index)}>
-              <span>{faq.question}</span>
-              <span className="arrow">{activeIndex === index ? '−' : '+'}</span>
-            </button>
-            {activeIndex === index && (
-              <div className="faq-answer">
-                {faq.answer}
+    <>
+      <section className="faq-container">
+        <h6 className="faq-subtitle">We have answers</h6>
+        <h2 className="faq-title">Frequently Asked Questions</h2>
+        <section className="faq-section">
+          <div className="faq-list">
+            {faqs.map((faq, index) => (
+              <div key={index} className="faq-item">
+                <button className="faq-question" onClick={() => toggle(index)}>
+                  <span className='question'>{faq.question}</span>
+                  <span className="arrow">
+                    <img
+                      src={activeIndex === index ? UpArrow : DownArrow}
+                      alt={activeIndex === index ? 'Collapse' : 'Expand'}
+                      className="arrow-icon"
+                    />
+                  </span>
+                </button>
+                {activeIndex === index && (
+                  <div className="faq-answer">
+                    {faq.answer}
+                  </div>
+                )}
               </div>
-            )}
+            ))}
           </div>
-        ))}
-      </div>
-    </section>
+        </section>
+      </section>
+    </>
   );
 }
 
