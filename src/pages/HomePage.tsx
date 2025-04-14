@@ -6,11 +6,13 @@ import '../styles/Home.css';
 import Coffee from '../assets/CoffeeHouse.png';
 import FAQ from '../components/FAQ';
 import Listings from '../components/Listings';
-import Accolades from '../components/Accolades';
+// import Accolades from '../components/Accolades';
 import MeetDomanic from '../components/MeetDomanic';
 import Testimonials from '../components/Testimonials';
 import GetInTouch from '../components/GetInTouch';
 import ContactForm from '../components/ContactForm';
+import HomeStock from '../assets/HouseStock.jpg'
+import SaleHouse from '../assets/SaleHouse.png'
 
   const HomePage: React.FC = () => {
 
@@ -27,7 +29,7 @@ import ContactForm from '../components/ContactForm';
           <img src={HeroBackground} alt="House Stock" className='hero-image' />
           <div className='hero-overlay'></div>
           <h5 className='hero-subtitle'><span className='dash-span'>--</span> Your Sarasota Lifestyle Starts Here <span className='dash-span'>--</span></h5>
-          <h1 className='hero-title'>Find Your Dream<br/>Home by the <span className='gulf'>Gulf</span></h1>
+          <h1 className='hero-title'>Find Your Dream Home by the <span className='gulf'>Gulf</span></h1>
           <p className='hero-description'>Whether you're buying, selling, or just exploring your options, I'm here to help you navigate every step with confidence.</p>
           <Link to='./meet-my-realtor' className='gold-button'>LET'S CONNECT</Link>
         </div>
@@ -45,7 +47,7 @@ import ContactForm from '../components/ContactForm';
             Buying your first home, selling your current one, or just exploring your options? Let's meet up over coffee and talk about what you're looking for. No pushy sales pitch—just honest, local advice to help you get started.
             </p>
             <div className='coffee-button-wrapper'>
-          <button className='coffee-button' onClick={scrollToContact}>Schedule a Coffee</button>
+          <button className='coffee-button' onClick={scrollToContact}>GRAB A COFFEE</button>
         </div>
           </div>
           <div className='coffee-right'>
@@ -54,23 +56,27 @@ import ContactForm from '../components/ContactForm';
         </div>
       </section>
 
-      <Accolades />
+      {/* <Accolades /> */}
       
       <Listings />
 
       <section className='services-container'>
         <div className='services-header'>
-          <h2 className='services-title'>Services</h2>
+          <h2 className='services-title'>Our Services</h2>
         </div>
         <div className='services-cards'>
           <div className='service-card'>
-            <h3 className='service-heading'>Buying a New Home?</h3>
-            <p className='service-text'>Let me help you find your perfect place. From showings to closing, I've got you covered.</p>
+            <h6 className='service-subtitle'>Looking for a</h6>
+            <h3 className='service-heading'>New Home?</h3>
+            <p className='service-text1'>Let’s find the one that feels just right.</p>
+            <p className='service-text2'>Whether you're dreaming of a beachfront condo, a family-friendly neighborhood, or a cozy escape near downtown Sarasota, I’ll help you find a place that fits your lifestyle—not just your checklist. From first showing to closing day, I’ve got your back.</p>
             <button className='service-button'>Start Buying</button>
           </div>
           <div className='service-card'>
-            <h3 className='service-heading'>Selling Your Home?</h3>
-            <p className='service-text'>Ready to list? I'll help you get top dollar with smart marketing and strong negotiation.</p>
+          <h6 className='service-subtitle'>Want to Sell</h6>
+            <h3 className='service-heading'>Your Home?</h3>
+            <p className='service-text1'>Ready to list? I'll help you get top dollar with smart marketing and strong negotiation.</p>
+            <p className='service-text2'>From prepping your home to closing the deal, I’ll guide you every step of the way with expert advice, tailored strategies, and a commitment to making the process as smooth and rewarding as possible. Let's turn your goals into a successful sale.</p>
             <button className='service-button'>Start Selling</button>
           </div>
         </div>
@@ -78,16 +84,17 @@ import ContactForm from '../components/ContactForm';
 
       <section className='areas-container'>
         <div className='areas-header'>
-          <h2 className='areas-title'>Areas I Serve</h2>
+          <h6 className='areas-subtitle'>Check out the</h6>
+          <h2 className='areas-title'>Areas We Serve</h2>
         </div>
         <div className='areas-grid'>
           {[
             { city: 'Sarasota', image: HeroBackground },
-            { city: 'Venice', image: HeroBackground },
-            { city: 'Bradenton', image: HeroBackground },
-            { city: 'Siesta Key', image: HeroBackground },
+            { city: 'Venice', image: HomeStock },
+            { city: 'Bradenton', image: SaleHouse },
+            { city: 'Siesta Key', image: SaleHouse },
             { city: 'Longboat Key', image: HeroBackground },
-            { city: 'Lakewood Ranch', image: HeroBackground },
+            { city: 'Lakewood Ranch', image: HomeStock },
           ].map((area, index) => (
             <div
               key={index}

@@ -1,94 +1,211 @@
 .new-listings-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    padding: 60px 40px;
-    background-color: #f5f5f5;
-    margin:0px 20px 100px 20px;
-    border-radius: 10px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin: 0px 20px;
+  border-radius: 10px;
+}
 
 .new-listings-header {
   width: 100%;
-  text-align: center;  /* Ensure the title is centered */
+  text-align: center;
+  /* Ensure the title is centered */
+  margin-bottom: 30px;
 }
 
 .new-listings-title {
-  margin: 0;
-  font-size: 2rem;  /* Adjust this for your desired size */
-  font-weight: bold;
-  color: #111;
+  color: #212022;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 113.2%;
+  letter-spacing: -0.4px;
 }
-  
-  .listing-card {
-    width: 300px;
-    background-color: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-  }
-  
-  .listing-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Container for the image and badges */
-  .listing-image-container {
-    position: relative;  /* Position context for badges */
-  }
-  
-  .listing-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  .listing-badges {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .badge {
-    background-color: #bfa145; /* gold tone */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-    
-  .listing-details {
-    padding: 20px;
-  }
-  
-  .listing-address {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #111;
-    margin-bottom: 5px;
-  }
-  
-  .listing-city {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 10px;
-  }
-  
-  .listing-price {
-    font-size: 1.1rem;
-    color: #bfa145; /* gold tone */
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .listing-beds-baths {
-    font-size: 0.95rem;
-    color: #333;
-  }
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Container for the image and badges */
+.listing-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.listing-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.listing-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,
+      rgba(239, 169, 54, 0.8) 0%,
+      rgba(239, 169, 54, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.listing-image-container:hover .listing-image-overlay {
+  opacity: 1;
+}
+
+.overlay-button {
+  display: flex;
+  height: 42px;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  background: #212022;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.listing-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  background: #EFA936;
+  color: #212022;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 113.2%;
+  letter-spacing: -0.14px;
+}
+
+
+.listing-details {
+  padding: 20px;
+}
+
+.listing-address {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 113.2%;
+  letter-spacing: -0.22px;
+  margin-bottom: 8px;
+}
+
+.listing-city {
+  color: #949494;
+  text-align: center;
+  font-family: Merriweather;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 113.2%;
+  /* 18.112px */
+  letter-spacing: -0.16px;
+  margin-bottom: 8px;
+}
+
+.listing-price {
+  color: var(--Black, #212022);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 113.2%;
+  /* 40.752px */
+  letter-spacing: -0.36px;
+  margin-bottom: 24px;
+}
+
+.listing-beds-baths {
+  display: flex;
+  justify-content: center;
+  color: var(--Black, #212022);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.2%;
+  /* 18.112px */
+  letter-spacing: -0.16px;
+}
+
+.spacing {
+  width: 26px;
+  /* 👈 tweak as needed for the gap between "Bedrooms" and the next icon */
+  display: inline-block;
+}
+
+.view-all-button {
+  display: flex;
+  height: 42px;
+  padding: 12px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 20px;
+  background: var(--Black, #212022);
+  color: #FFF;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+
+.view-all-button:hover {
+  background: #EFA936;
+  color: #212022;
+  transition: background-color 0.3s ease;
+}
