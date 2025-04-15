@@ -1,20 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'
-// import ListingsPage from './pages/ListingsPage';
-//import Navbar from './components/Navbar';
+import ListingsPage from './pages/ListingsPage';
+import Navbar from './components/Navbar';
 import MortgageCalculator from './components/MortgageCalculator';
 import MeetMyRealtor from './pages/MeetMyRealtor';
 
 function App() {
   return (
     <Router>
-        {/* <Navbar /> */}
+         <Navbar /> 
         <Routes>
 
           <Route path="/" element={<HomePage />} />
           <Route path="/meet-my-realtor" element={<MeetMyRealtor />} />
           <Route path="/mortgage-calculator" element={<MortgageCalculator />} />
-          
+          <Route path="/listings" element={<ListingsPage />} />
         </Routes>
     </Router>
   );

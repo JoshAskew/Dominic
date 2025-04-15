@@ -6,6 +6,7 @@ import Bath from '../assets/Bath.svg'
 import ArrowRight from '../assets/ArrowRight.png'
 
 
+
 const listings = [
   {
     id: 1,
@@ -140,9 +141,9 @@ const Listings: React.FC = () => {
         </div>
       ))}
 
-     <button>
+     
         <a href="/listings" className='view-all-button'>View All Listings<img src={ArrowRight} /></a>
-     </button>
+     
     </section>
   )
 }

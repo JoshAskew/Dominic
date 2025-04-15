@@ -1,0 +1,56 @@
+nav {
+    width: 100%;
+    padding: 0 36px;
+    /* this sets 30px space from both sides of the viewport */
+}
+
+.nav-header {
+    font-family: Inter, "sans-serif";
+    font-size: 24px;
+    color: #212022;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    background-color: #fff;
+    padding: 8px 72px;
+    margin: 0 auto;
+    max-width: calc(100vw - 72px);
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    border-radius: 40px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 65px;
+    color: #212022;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+.navbar-button {
+    display: flex;
+    height: 42px;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    background: #EFA936;
+    cursor: pointer;
+}
+
+.navbar-button:hover {
+    background: #F2BA5F;
+  }
